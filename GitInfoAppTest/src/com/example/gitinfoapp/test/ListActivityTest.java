@@ -7,6 +7,12 @@ import com.example.gitinfoapp.ListActivity;
 import com.example.gitinfoapp.common.Const;
 import com.example.gitinfoapp.task.ListTask;
 
+/**
+ * 
+ * 
+ * @author zaike
+ *
+ */
 public class ListActivityTest extends ActivityInstrumentationTestCase2<ListActivity> {
 
 	private ListActivity listActivity;
