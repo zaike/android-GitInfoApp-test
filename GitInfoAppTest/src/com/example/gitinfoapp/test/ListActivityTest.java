@@ -10,7 +10,7 @@ import com.example.gitinfoapp.task.ListTask;
 /**
  * 
  * 
- * @author zaike
+ * @author zaikes
  *
  */
 public class ListActivityTest extends ActivityInstrumentationTestCase2<ListActivity> {
