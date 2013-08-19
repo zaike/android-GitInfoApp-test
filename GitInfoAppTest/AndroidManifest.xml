@@ -16,4 +16,7 @@
         <uses-library android:name="android.test.runner" />
     </application>
 
+    	<instrumentation
+        android:name="com.zutubi.android.junitreport.JUnitReportTestRunner"
+        android:targetPackage="com.example.gitinfoapp"/>
 </manifest>
