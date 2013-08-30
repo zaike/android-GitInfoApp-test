@@ -61,26 +61,5 @@ public class ListActivityTest extends ActivityInstrumentationTestCase2<ListActiv
 		// 一覧取得成レスポンスが取得できたかどうか？？
 		assertEquals(Const.LIST_GET_LIST_TASK_SUCCEED, listTask.getMessage().what);
 	}
-	
-	public void testActivity() throws Exception {
-		ActivityMonitor monitorMain = new ActivityMonitor(ListActivity.class.getCanonicalName(), null, false);
-		ActivityMonitor monitorHoge = new ActivityMonitor(HogeActivity.class.getCanonicalName(), null, false);
-		getInstrumentation().addMonitor(monitorMain);
-		getInstrumentation().addMonitor(monitorHoge);
-		
-		final Button button = (Button)this.listActivity.findViewById(com.example.gitinfoapp.R.id.button1);
-		TouchUtils.tapView(this, button);
-		getInstrumentation().waitForMonitorWithTimeout(monitorHoge, 2000);
-		
-		// 指定のActivityに遷移した事を確認する。
-		assertEquals(1, monitorHoge.getHits());
-/*		
-		button.performClick();
-		
-		getInstrumentation().waitForIdleSync();
-		
-		Intent target = getStartedActivityIntent();
-*/
-	}
 
 }
